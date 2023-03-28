@@ -10,14 +10,14 @@
 
 <body>
     <p>1.Ce afiseaza urmatorul code? Default Binding in JavaScript</p>
-    <code><pre>
+    <!-- <script>
         function mesaj() {
             console.log(this.name + ' are mere');
         }
         const name = 'Ana';
         mesaj(); 
-    </pre></code>
-    <p>2.Ce afiseaza urmatorul code?</p>
+    </script> -->
+    <!-- <p>2.Ce afiseaza urmatorul code?</p>
     <code><pre>
         function mesaj() {
             'use strict'; 
@@ -27,7 +27,7 @@
         mesaj(); 
     </pre></code>
     <p>3.Ce afiseaza urmatorul code? Implicit Binding in JavaScript</p>
-    <code><pre>
+    <script>
         function mesaj() {
             console.log(this.name + ' are '+ this.cantitate+' mere');
         }
@@ -39,15 +39,15 @@
             newObj: {
                 cantitate: 26,
                 name: 'Ionel',
-                mesaj:mesaj,
+                // mesaj:mesaj,
             }
         }
 
         myObj.mesaj(); // `this` is bound to `myObj` 
         myObj.newObj.mesaj(); // `this` is bound to `newObj` 
-    </pre></code>
+    </script>
     <p>4.Ce afiseaza urmatorul code? Explicit binding in JavaScript</p>
-    <code><pre>
+    <script>
         function mesaj() {
             console.log(this.name + ' are mere');
         }
@@ -57,8 +57,8 @@
         }
 
         mesaj.call(myObj); 
-    </pre></code>
-    <p>5.Ce afiseaza urmatorul code? Constructor Call Binding in JavaScript</p>
+    </scri>
+    <!-- <p>5.Ce afiseaza urmatorul code? Constructor Call Binding in JavaScript</p>
     <code><pre>
         class Person {
             constructor(name){
@@ -147,7 +147,7 @@
         avion.fly(190);
         let run = masina.run.bind(avion, 160);
         run();
-    </pre></code>
+    </pre></code> -->
 
 </body>
 
