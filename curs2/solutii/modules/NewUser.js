@@ -1,22 +1,22 @@
-class NewUser{
+class NewUser {
     #varsta; // proprietate privata
     #password; // proprietate privata
-    constructor(id,nume,email){
+    constructor(id, nume, email) {
         //setam proprietatile
         this._id = id;// proprietate ptotected
         this.nume = nume;
         this._email = email; // proprietate ptotected
-        this.#varsta=18;
-        this.#password ='12345';
+        this.#varsta = 18;
+        this.#password = '12345';
     }
-    get id(){
+    get id() {
         return this._id;
     }
-    
-    get varsta(){
+
+    get varsta() {
         return this.#varsta;
     }
-    get password(){
+    get password() {
         return this.#password;
     }
     // set varsta(newVarsta){
@@ -25,27 +25,26 @@ class NewUser{
     // }
 
     // Adresa de email este protected atunci ii definim getter sar nu setam setter
-    get email(){
-        return this._email;
-    }
-    
-    mananca (claorii){
+
+    mananca(claorii) {
         console.log(`Mananca ${claorii} pe zi.`);
     }
-    doarme(ore){
+    doarme(ore) {
         console.log(`Doarme ${ore} ore pe zi`);
+        console.log(`Parola mea este ${this.#password}`);
     }
 
 }
 
-class Abonat extends NewUser{
-    constructor(id, nume, email){
+class Abonat extends NewUser {
+    constructor(id, nume, email) {
         super(id, nume, email);
 
     }
-    info (){
+    info() {
         console.log(`Numele meu este ${this.nume} cu adresa de email ${this.email}`);
+        // console.log(`Parola mea este ${this.#password}`);
     }
-   
 }
-export {NewUser, Abonat}
+
+export { NewUser, Abonat }
