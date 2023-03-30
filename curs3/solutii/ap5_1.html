@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <script>
+    <script> // o clasa poate mosteni o singura alta clasa
+        class Phone extends OldPhone {
+
+        }
         class Phone {
             constructor() {
-                if (this.constructor.name === 'Phone')
+                if (this.constructor.name === 'Phone')// daca am o singura linie, acoladele sunt optionale
                     throw new Error('Phone class is absctract')
+                    console.log('sunt in constructorul parinte');
             }
 
             call(number) { }
