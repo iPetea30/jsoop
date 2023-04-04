@@ -9,9 +9,9 @@ document
     e.preventDefault();
 
     // Getting Form Values
-    const name = document.getElementById("name").value,
-      price = document.getElementById("price").value,
-      year = document.getElementById("year").value;
+    const name = document.getElementById("name").value;
+    const price = document.getElementById("price").value;
+    const  year = document.getElementById("year").value;
 
     // Create a new Oject Product
     const product = new Product(name, price, year);
@@ -22,6 +22,7 @@ document
     // Input User Validation
     if (name === "" || price === "" || year === "") {
       ui.showMessage("Please Insert data in all fields", "danger");
+      return false;
     }
 
     // Save Product

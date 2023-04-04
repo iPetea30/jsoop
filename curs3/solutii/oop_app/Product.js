@@ -13,4 +13,4 @@ export class Product {
     this.price = price;
     this.year = year;
   }
-}
+}   

@@ -17,7 +17,7 @@
             static topPage = {};
             constructor(name) {
                 this.name = name;
-                this._admin= 'administrator';
+                this._admin = 'administrator';
             }
             // public method 
             greet() {
@@ -32,14 +32,15 @@
             getCount() {
                 return this.#count;
             }
-             //  protected atunci ii definim getter dar nu setam setter
-            get admin(){
+            //  protected atunci ii definim getter dar nu setam setter
+            get admin() {
+                console.log('Sunt in getter admin');
                 return this._admin;
             }
-            info (){
+            info() {
                 console.log(`adminul acestui site are rol de ${this.admin}`);
             }
-            static getTopPage(){
+            static getTopPage() {
                 return Page.topPage;
             }
         }
@@ -50,15 +51,15 @@
                 this.page = page;
             }
             static vizitPage(page) {
-                if (!(page in  Page.topPage)) {
+                if (!(page in Page.topPage)) {
                     Page.topPage[page] = 0;
                 }
                 Page.topPage[page]++;
-                
+
                 console.log(`The visited page is ${page}`);
             }
-            
-           
+
+
         }
         let obj = new Website('https://link-academy.com/');
         obj.greet();
@@ -67,19 +68,24 @@
         console.log(obj.getCount());
 
         let p = new Page(obj.name, 'Contact');
+        console.log(p);
         Page.vizitPage(p.page);
         Page.vizitPage(p.page);
         Page.vizitPage(p.page);
-        Page.topPage['HomePage']=4;
-        
+
+
+        Page.topPage['HomePage'] = 4;
+
         let p2 = new Page(obj.name, 'About');
         Page.vizitPage(p2.page);
         Page.vizitPage(p2.page);
         console.log(Page.getTopPage())
+        console.log(Page.topPage);
         console.log(p2.info());
         console.log(p2.admin) // good practice we can access the protected member
         console.log(p2._admin) // this works, but this is not recommended as it violates encapsulation principles
-p2.admin='vizitator';
+        p2._admin = 'vizitator';
+        console.log(p2.admin);
     </script>
 </body>
 
