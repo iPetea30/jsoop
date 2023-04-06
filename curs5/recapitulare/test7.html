@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Vehicle {
+            constructor(type, color, make, year) {
+                this._type = type;
+                this._color = color;
+                this._make = make;
+                this._year = year;
+            }
+            get type() {
+                console.log('Sunt in getter de _type');
+                return this._type;
+            }
+            set type(value) {
+                console.log('Sunt in setter de _type');
+                this._type = value;
+            }
+
+            start() {
+                return 'Vehicle started';
+            }
+            stop() {
+                return 'Vehicle stopped';
+            }
+            pickUpPassengers() {
+                return "Passengers picked up";
+            }
+            dropOffPassengers() {
+                return 'Passengers dropped off';
+            }
+            info() {
+                return `Vehicle info ${this._type} ${this._make} ${this._color} ${this._year}`
+            }
+        }
+
+        const vehicle1 = new Vehicle("car", "red", "Ford", 2015);
+        const vehicle2 = new Vehicle("motorbike", 'blue', 'Honda', 2018);
+        vehicle1.type;
+        vehicle1.type = 'Bicicleta';
+        console.log(vehicle1.info());
+        console.log(vehicle1.start());
+        console.log(vehicle1.stop());
+        console.log(vehicle1.pickUpPassengers());
+        console.log(vehicle1.dropOffPassengers());
+    </script>
+</body>
+
+</html>
