@@ -60,7 +60,7 @@ $(document).ready(function ($) {
 
         let ajxReq = $.ajax({
             type: 'DELETE',
-            url: 'http://localhost:3001/users/1652778027417'
+            url: 'http://localhost:3001/users/1682441834625'
         });
 
         ajxReq.success(function (data, status, jqXhr) {
@@ -79,9 +79,9 @@ $(document).ready(function ($) {
         let ajxReq = $.ajax({
             type: 'POST',
             data: {
-                "name": "teresa may5",
-                "password": "parliament5",
-                "profession": "brexit killer5",
+                "name": "Tudor Arghezi",
+                "password": "Maharu22",
+                "profession": "Actor",
                 "id": 5
             },
             url: 'http://localhost:3001/users'
